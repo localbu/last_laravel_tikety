@@ -51,7 +51,7 @@ class EventSeeder extends Seeder
                     'name'=>$faker->sentence(2),
                     'price'=>$faker->numberBetween(10,100),
                     'quantity'=>$faker->numberBetween(10,100),
-                    'max-buy'=>$faker->numberBetween(10,100),
+                    'max_buy'=>$faker->numberBetween(10,100),
 
                 ]);
             }
