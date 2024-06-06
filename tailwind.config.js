@@ -26,15 +26,15 @@ export default {
                 poppins: "Poppins, sans-serif",
             },
             colors: {
-                "dark-indigo": "#0D0322",
+                "dark-indigo": "#240750",
                 primary: "#27164B",
                 secondary: "#82D0DF",
                 "butter-yellow": "#F7FF82",
                 "lavender-pink": "#DF82CB",
                 "persian-pink": "#DF82CA",
                 "iron-grey": "#DAD5E4",
-                "pastel-purple": "#A99FBD",
-                "bluish-purple": "#38255F",
+                "pastel-purple": "#344C64",
+                "bluish-purple": "#344C64",
                 "smoke-purple": "#A497BE"
             },
             },

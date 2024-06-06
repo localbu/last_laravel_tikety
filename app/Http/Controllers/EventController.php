@@ -11,6 +11,7 @@ class EventController extends Controller
 {
     public function index(Request $request, $slug){
         $event = Event::fetch($slug);
+        // dd($event);
         return view('frontend.details',compact('event'));
     }
 

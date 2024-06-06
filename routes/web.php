@@ -4,6 +4,8 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\EventController as AdminEventController;
+use App\Http\Controllers\Admin\TicketController as AdminTicketController;
+use App\Http\Controllers\Admin\TransactionController as AdminTransactionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,5 +35,9 @@ Route::middleware([
     Route::prefix('admin')->name('admin.')->group(function () {
     // Code untuk routing admin
     Route::resource('events', AdminEventController::class);
+    Route::resource('events.tickets', AdminTicketController::class);
+    Route::get('pdf/{event}/{transaction}', [AdminTransactionController::class, 'pdf'])->name('pdf');
+    Route::get('approve/{event}/{transaction}', [AdminTransactionController::class, 'approve'])->name('approve');
+    Route::resource('events.transactions', AdminTransactionController::class);
 });
 });

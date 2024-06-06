@@ -20,6 +20,7 @@
               <a href="{{ route('admin.events.create') }}" class="px-2 py-1 font-bold text-white bg-green-500 rounded">
                 + Buat Event
               </a>
+              
             </div>
             <div class="overflow-hidden shadow sm:rounded-md">
               <div class="px-4 py-5 bg-white sm:p-6">
@@ -48,10 +49,18 @@
                         <td class="px-6 py-4">{{ $event->durations }} hour</td>
                         <td class="px-6 py-4">{{ $event->start_time->format(' d M Y') }}</td>
                         <td class="px-6 py-4 space-y-1 text-center">
+                          <a href="{{ route('admin.events.tickets.index', $event->id) }}"
+                            class="block px-2 py-1 text-white bg-green-500 rounded">
+                           Tiket
+                         </a>
                           <a href="{{ route('admin.events.edit', $event->id) }}"
                              class="block px-2 py-1 text-white bg-blue-500 rounded">
                             Edit
                           </a>
+                          <a href="{{ route('admin.events.transactions.index', $event->id) }}"
+                            class="block px-2 py-1 text-white bg-yellow-500 rounded">
+                           Transaksi
+                         </a>
                           <form action="{{ route('admin.events.destroy', $event->id) }}" method="POST" class="block"
                                 onsubmit="return confirm('Hapus event {{ $event->name }}?')">
                             @csrf
